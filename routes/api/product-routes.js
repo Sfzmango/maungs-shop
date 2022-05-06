@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get one product - working, tags not showing
+// get one product - working
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product
+// create new product - working
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// update product
+// update product - working
 router.put('/:id', (req, res) => {
   // update product data
   Product.update(req.body, {
@@ -113,6 +113,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete product - working
 router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
   try {
